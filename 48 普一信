@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int x, y;
+  int sum1 = 0, sum2 = 0;
+  cout << "輸入數字";
+  cin >> x;
+  cout << "輸入數字";
+  cin >> y;
+  //判斷親和數
+  for(int i = 1; i < x; i++){
+    if(x / i == 0){
+      sum1 = sum1 + i;
+    }
+  }
+  for(int i = 1; i < y; i++){
+    if(y / i == 0){
+      sum2 = sum2 + i;
+    }
+  }
+  //yes or no
+  if(sum1 == y && sum2 == x){
+    cout << "親和數";
+  }
+  else {
+    cout << "幹";
+  }
+}
